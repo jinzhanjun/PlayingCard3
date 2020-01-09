@@ -12,9 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        var playingCards = [PlayingCard]()
+        
+        for suit in PlayingCard.Suit.all {
+            for numic in PlayingCard.Numic.getAll() {
+                playingCards += [PlayingCard(suit: suit, numic: numic)]
+                print(PlayingCard(suit: suit, numic: numic))
+            }
+        }
     }
-
-
 }
 
